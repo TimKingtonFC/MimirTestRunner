@@ -1,9 +1,8 @@
 #!/bin/bash
-wget -q http://cs.franklin.edu/~whittakt/MimirTests/hamcrest-core-1.3.jar
-wget -q http://cs.franklin.edu/~whittakt/MimirTests/junit-4.13.jar
-wget -q http://cs.franklin.edu/~whittakt/MimirTests/MimirTestRunner.java
+wget -q https://raw.githubusercontent.com/toddawhittaker/MimirTestRunner/master/hamcrest-core-1.3.jar
+wget -q https://raw.githubusercontent.com/toddawhittaker/MimirTestRunner/master/junit-4.13.jar
+wget -q https://raw.githubusercontent.com/toddawhittaker/MimirTestRunner/master/MimirTestRunner.java
 
-#export CLASSPATH=.:hamcrest-core-1.3.jar:junit-4.13.jar
 export CLASSPATH=.
 for filename in *.jar; do
   export CLASSPATH=${CLASSPATH}:${filename}
