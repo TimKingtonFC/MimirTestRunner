@@ -38,4 +38,7 @@ libraries from this repo. It will compile all the Java files and run those that
 are test cases. The exit code from the runner will tell Mimir what percent of the  
 test cases pass.
 
+If you want to provide debugging help to students, it's best to give them a message as  
+the first parameter to all your calls to `assertXXXX`.
+
 Happy unit testing!
