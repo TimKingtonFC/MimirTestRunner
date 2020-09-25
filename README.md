@@ -16,21 +16,22 @@ This little repo solves that problem and lets you run any number of JUnit 4 test
 for the problem
 1. Select a "Custom Test Case" for the test case type.
 1. Turn on "Allow partial credit"
+1. Drag and drop any test cases or supplemental JAR files into the Files area
 1. Paste the following test script into the Bash script area:  
-  ```bash
-  # To use this script:
-  #   Add "Optional" files containing your test cases
-  #   (file names must macth ".*Test.java$" regex) and
-  #   any other jar files or java files you want to compile
-  #   or include in the classpath. You could also wget
-  #   those file from a github source.
-  
-  wget -q https://raw.githubusercontent.com/toddawhittaker/MimirTestRunner/master/MimirTestRunner.sh
-  source ./MimirTestRunner.sh
-  ```  
+```bash
+# To use this script:
+#   Add "Optional" files containing your test cases
+#   (file names must macth ".*Test.java$" regex) and
+#   any other jar files or java files you want to compile
+#   or include in the classpath. You could also wget
+#   those file from a github source.
+
+wget -q https://raw.githubusercontent.com/toddawhittaker/MimirTestRunner/master/MimirTestRunner.sh
+source ./MimirTestRunner.sh
+```  
   
   Alternately, you could directly paste in the contents of `MimirTestRunner.sh` from the repo.
-1. Drag and drop any test cases or supplemental JAR files into the Files area
+
 
 That's it. The `MimirTestRunner.sh` will grab the test runner and required JUnit  
 libraries from this repo. It will compile all the Java files and run those that  
