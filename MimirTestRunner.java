@@ -118,9 +118,10 @@ public class MimirTestRunner {
                 System.out.println(trace);
             }
         }
+		int passed = runs - fails < 0 ? 0 : runs - fails;
         System.out.println(String.format(
                 "%d of %d tests passed. Your score is %d%%",
-                runs-fails, runs, getScore()));
+                passed, runs, getScore()));
 
     }
 
