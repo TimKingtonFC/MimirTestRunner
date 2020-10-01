@@ -125,6 +125,9 @@ public class MimirTestRunner {
     }
 
     public int getScore() {
-        return (int)Math.round(((double)runs-fails)/runs*100);
+        int score = (int)Math.round(((double)runs-fails)/runs*100);
+		if (score < 0) {
+			score = 0;
+		}
     }
 }
