@@ -20,5 +20,9 @@ if [ -f "RunMe.class" ]; then
 fi
 
 java MimirTestRunner >> DEBUG
-
-echo "$?" > OUTPUT
+status=$?
+if [ $status -gt 100 ]; then
+  echo 0 > OUTPUT
+else
+  echo $status > OUTPUT
+fi
