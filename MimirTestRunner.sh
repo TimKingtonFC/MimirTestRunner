@@ -4,9 +4,13 @@ wget -q https://raw.githubusercontent.com/toddawhittaker/MimirTestRunner/master/
 wget -q https://raw.githubusercontent.com/toddawhittaker/MimirTestRunner/master/MimirTestRunner.java
 
 export CLASSPATH=.
-for filename in *.jar; do
-  export CLASSPATH=${CLASSPATH}:${filename}
-done
+count=$(find . -type f -name "*.jar" 2>/dev/null | wc -l)
+if [ "$count" != 0 ]
+then 
+  for filename in ./*.jar; do
+    export CLASSPATH=${CLASSPATH}:${filename}
+  done
+fi
 
 javac ./*.java;
 
